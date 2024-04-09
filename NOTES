@@ -1,0 +1,24 @@
+// For admin middleware
+    $ php artisan make:migration add_details_to_users_table
+    // edit to users_table up and down function
+    // then
+    $ php artisan migrate
+
+    $ php artisan make:middleware AdminMiddleware
+
+// For creating categories
+    $php artisan make:migration create-categories_table
+
+    //then create a model for categories
+    $php artisan make:model Category
+
+        //then from Category model, write a fillable protected arrays
+
+            //then run
+            #php artisan make:controller Admin/CategoryController
+
+                //then from web.php, write a route
+
+                    //then from categoryController, add 
+                    public functio store(Request $request){}
+                    //then run php artisan make:request CategoryFormRequest
